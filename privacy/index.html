@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Postforge Privacy Policy</title><link rel="stylesheet" href="../legal.css"></head>
+<body><main>
+<nav><a href="/">Postforge</a><a href="/terms/">Terms of Service</a></nav>
+<h1>Privacy Policy</h1>
+<p class="muted">Postforge, a product of Devtegra LLC, Austin, Texas. Effective 2026-09-15.</p>
+
+<p>Postforge is a tool that helps marketing teams plan, write, check, approve, and publish social media posts. This policy explains what Postforge stores, why, and what it never stores. It is written to be read.</p>
+
+<h2>Who this covers</h2>
+<p>People who sign in to Postforge (we call them members of a workspace), and the businesses whose workspaces they belong to (tenants). It does not cover the audiences of the social accounts a tenant connects; Postforge never collects information about them beyond the aggregate numbers described below.</p>
+
+<h2>What we store</h2>
+<table>
+<tr><th>Information</th><th>Why</th><th>Where</th></tr>
+<tr><td>Your email address</td><td>To sign you in (by a link or code sent to it) and to record who approved or published a post</td><td>Our database, hosted by Supabase</td></tr>
+<tr><td>Workspace membership and role</td><td>To decide what you may see and do</td><td>Our database</td></tr>
+<tr><td>Posts, briefs, plans, rules, and settings</td><td>The work itself. These live in your workspace's own code repository on GitHub; Postforge keeps an index of them</td><td>Your GitHub repository and our database</td></tr>
+<tr><td>Images, videos, and other files you upload</td><td>To attach to posts and to describe them for you</td><td>Private storage in your workspace, hosted by Supabase</td></tr>
+<tr><td>Keys and tokens you connect: your Anthropic API key and the access tokens for social accounts you connect</td><td>To act on your behalf when you ask: to run a conversation, to publish a post you approved, to read your results</td><td>Encrypted at rest in a vault. Never shown again after entry, never written to your repository, never sent anywhere except the service it belongs to</td></tr>
+<tr><td>Records of actions: approvals, publications, script runs, and how many AI tokens each conversation used</td><td>So your team can see who did what, and so you can see what your Anthropic account is spending</td><td>Our database</td></tr>
+<tr><td>Aggregate results from connected social accounts: reach, impressions, likes, comments, shares, saves, clicks, video views, follower counts, and audience breakdowns by country or age band</td><td>To show you how posts performed and to inform planning</td><td>Our database</td></tr>
+</table>
+
+<h2>What we never store</h2>
+<ul>
+<li>Identities of the people who follow, like, or comment on your posts. Postforge reads counts, not people.</li>
+<li>Comment text or direct messages from your social accounts.</li>
+<li>Passwords for any social platform. Connections use each platform's own consent screen or a revocable app password you create there.</li>
+<li>Your Anthropic key or social tokens in any readable form outside the vault.</li>
+<li>Any personal data about your customers or end users. The pipeline's own rules forbid it from entering a workspace.</li>
+</ul>
+
+<h2>How your Anthropic account is used</h2>
+<p>Every conversation in Postforge, and every image description it drafts, runs on the Anthropic API key your workspace connected. Requests go directly from our server to Anthropic under your key and are billed to your Anthropic account. Anthropic's handling of that data is governed by your agreement with Anthropic. Postforge does not use your conversations to train anything and does not share them with other tenants.</p>
+
+<h2>How publishing works</h2>
+<p>Postforge never publishes on its own. A person in your workspace with the approver role presses a button on a post that has already been approved. Only then does Postforge send that post to the account you connected, using the permission you granted that platform. You can disconnect an account at any time from Connected services, which deletes its token from the vault.</p>
+
+<h2>Services we rely on</h2>
+<table>
+<tr><th>Service</th><th>What it does for Postforge</th></tr>
+<tr><td>Supabase</td><td>Database, sign-in, file storage, the vault, and the server functions that run Postforge</td></tr>
+<tr><td>GitHub</td><td>Hosts each workspace's repository and the Postforge web pages; runs the checks</td></tr>
+<tr><td>Anthropic</td><td>The AI conversations, under each tenant's own account</td></tr>
+<tr><td>The social platforms you connect</td><td>Receive the posts you publish and return aggregate results</td></tr>
+</table>
+<p>We add a service to this list before we use it.</p>
+
+<h2>Cookies and browser storage</h2>
+<p>Postforge keeps your sign-in session in your browser's storage so you stay signed in. It sets no advertising or tracking cookies and includes no third-party analytics scripts.</p>
+
+<h2>Your choices</h2>
+<ul>
+<li>Sign out from any page.</li>
+<li>Disconnect a social account or your Anthropic key from Connected services.</li>
+<li>Delete uploaded files from Assets.</li>
+<li>Ask us to remove you from a workspace, or to delete a workspace entirely, by email.</li>
+</ul>
+
+<h2>Retention and deletion</h2>
+<p>Workspace data stays while the workspace exists. When a workspace is deleted, its database rows, uploaded files, and vault entries are deleted; the repository on GitHub belongs to the tenant and is theirs to keep or delete. Records of actions are kept for the life of the workspace because they are the audit trail behind every published post.</p>
+
+<h2>Security</h2>
+<p>Access is scoped per workspace by database rules that apply to every request. Keys and tokens are encrypted at rest and readable only by server code, never by the browser. Sign-in uses one-time links sent to your email. If we learn of a breach affecting your data, we will tell the affected workspaces without undue delay.</p>
+
+<h2>Children</h2>
+<p>Postforge is a business tool and is not directed at anyone under 18.</p>
+
+<h2>Changes</h2>
+<p>When this policy changes, the effective date above changes and the previous version stays available in our records on request.</p>
+
+<h2>Contact</h2>
+<p>Devtegra LLC, Austin, Texas. Write to the address listed at <a href="https://devtegra.com">devtegra.com</a>.</p>
+</main></body></html>
